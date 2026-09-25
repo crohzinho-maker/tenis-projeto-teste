@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lojinha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="cabecalho">
+
+        
+    <h1>Minha Lojinha</h1>
+
+    <input
+    id ="campo-pesquisa" 
+    type="search" 
+    placeholder="Buscar produtos"
+    >
+    
+
+
+      <nav class="menu">
+  <button>Roupas e acessórios</button>
+  <button>Relógios</button>
+  <button>Bolsas</button>
+  <button>Pijamas</button>
+  <button>Tênis</button>
+</nav>
+
+</header>
+       
+
+
+<div class="conteudo">
+   
+
+    <!-- categorias -->
+   <div class="categorias">
+    <h2>Categorias</h2>
+
+
+    <button id="botao-todos">
+      Todos os produtos
+    </button>
+
+    <button id="botao-promocoes">
+      Promoções
+    </button>
+
+    <button class="botao-categoria" data-categoria="esportivo">
+      Tênis Esportivos
+    </button>
+
+    <button class="botao-categoria" data-categoria="casuais">
+      Tênis Casuais
+    </button>
+
+    <button class="botao-categoria" data-categoria="infantil">
+      Tênis Infantis
+    </button>
+
+   </div>
+
+
+<!-- produtos  -->
+   <div class="produtos">
+
+
+      <div class="produto" 
+           data-categoria="esportivo"
+           data-promocao="sim">
+        <span class="selo-promocao">Promoção</span>
+
+    <div class="foto-produto">
+       <img 
+            class="foto-principal"
+            src="./fotos/tenis.jpg"
+            alt="Tenis de frente"
+      >
+       <img 
+           class="foto-alternativa" 
+           src="./fotos/tenisverso.jpg" 
+           alt="tenis de lado"
+      >
+    </div>
+  <p class="descrição">Nike Shox Border</p>
+  <p class="preco-antigo">R$ 249,90</p>
+   <p class="preço">R$ 199,90</p>
+   <button>Comprar</button>
+
+       </div>
+
+
+
+<div class="produto" 
+     data-categoria="esportivo">
+
+  <div class="foto-produto">
+    <img 
+            class="foto-principal"
+            src="./fotos/tenis2.jpg"
+            alt="Tenis de frente"
+      >
+    <img 
+           class="foto-alternativa" 
+           src="./fotos/tenisverso2.jpg" 
+           alt="tenis de lado"
+      >
+
+</div>
+ 
+  <p class="descrição">Nike Titanium Wave</p>
+  <p class="preço">R$ 149,90</p>
+
+  <button>Comprar</button>
+</div>
+
+
+
+
+      <div class="produto" 
+           data-categoria="casuais">
+
+        <div class="foto-produto">
+          <img
+          class="foto-principal"
+          src="./fotos/tenis3.jpg"
+          alt="tenis de lado"
+        >
+        
+        <img
+          class="foto-alternativa"
+          src="./fotos/tenisverso3.jpg"
+          alt="foto de lado"
+        >    
+
+        </div>
+
+        
+  <p class="descrição">Mizuno Wave</p>
+   <p class="preço">R$ 220,00</p>
+
+
+   <button>Comprar</button>
+       </div>
+      
+             <div class="produto" 
+                  data-categoria="infantil">
+
+        <div class="foto-produto">
+          <img
+          class="foto-principal"
+          src="./fotos/tenis4.jpg"
+          alt="tenis de lado"
+        >
+        
+        <img
+          class="foto-alternativa"
+          src="./fotos/tenisverso4.jpg"
+          alt="foto de lado"
+        >    
+
+        </div>
+
+        
+  <p class="descrição">Mizuno Wave</p>
+   <p class="preço">R$ 220,00</p>
+
+
+   <button>Comprar</button>
+       </div>
+
+  <p id="mensagem-sem-produtos" hidden>
+    Nenhum produto econtrado.
+  </p>
+
+<!-- DIV PRODUTOS  -->
+  </div>
+
+
+
+
+<!-- DIV - CONTEUDO (MASTER) -->
+</div> 
+
+
+<footer>
+  <p>&copy; 2026 Minha Lojinha</p>
+  <p>Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
