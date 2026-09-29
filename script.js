@@ -18,13 +18,17 @@
      
 });
 });*/
-const campoPesquisa = document.querySelector("#campo-pesquisa");
-const produtos = document.querySelectorAll(".produto");
+const campoPesquisa = document.querySelector("#campo-pesquisa"); // barra de procura/pesquisa
+const produtos = document.querySelectorAll(".produto"); //todos os produtos
 const mensagemProdutos = document.querySelector("#mensagem-sem-produtos");
-const botoesCategoria = document.querySelectorAll(".botao-categoria");
-const botaoPromocoes = document.querySelector("#botao-promocoes");
-const botaoTodos = document.querySelector("#botao-todos");
-const botoesMenu = document.querySelectorAll(".botao-topo");
+const botoesCategoria = document.querySelectorAll(".botao-categoria"); // todas as categorias de produtos, tirando promocao e botaoTodos
+const botaoPromocoes = document.querySelector("#botao-promocoes"); // botao de todos os produtos em promocão
+const botaoTodos = document.querySelector("#botao-todos"); // botao que faz aparecer todos os produtos no canto esquerdo
+const botoesMenu = document.querySelectorAll(".botao-topo"); // classe de todos os botoes do topo
+const botoesComprar = document.querySelectorAll(".botao-comprar") // todos os botoes  ''comprar'' nos produtos
+const quantidadeCarrinho = document.querySelector("#quantidade-carrinho") // quantidade de itens no carrinho, é uma ID  , SPAN
+
+let itensnocarrinho = 0;
 
 
 campoPesquisa.addEventListener("input", function () {
@@ -139,6 +143,18 @@ botoesMenu.forEach(function (botao){
 })
 
 
+botoesComprar.forEach(function (botaoComprar){
+  botaoComprar.addEventListener("click", function (){
+    itensnocarrinho = itensnocarrinho + 1;
+    quantidadeCarrinho.textContent = itensnocarrinho;
+    produtoClicado = botaoComprar.closest(".produto")
+
+    const qualbotaoCliquei = 
+    produtoClicado.querySelector(".descrição");
+        console.log(qualbotaoCliquei);
+
+  })
+})
 
 
 
